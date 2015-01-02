@@ -1,0 +1,9 @@
+/App-Benchmark-Accessors-*
+/.build
+!META.json
+*.swp
+*.un~
+/cover_db
+/nytprof*
+.DS_Store
+perltidy.LOG
