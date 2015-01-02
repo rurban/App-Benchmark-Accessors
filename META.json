@@ -68,6 +68,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/marcelgruenauer/App-Benchmark-Accessors/issues"
+      },
+      "homepage" : "https://github.com/marcelgruenauer/App-Benchmark-Accessors",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/marcelgruenauer/App-Benchmark-Accessors.git",
+         "web" : "https://github.com/marcelgruenauer/App-Benchmark-Accessors"
+      }
+   },
    "version" : "2.00",
    "x_contributors" : [
       "Marcel Gruenauer <hanekomu@gmail.com>"
