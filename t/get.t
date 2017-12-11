@@ -27,9 +27,10 @@ my $ClassXSAccessor          = WithClassXSAccessor->new;
 my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
 my $ObjectTinyXS             = WithObjectTinyXS->new;
 my $Rose                     = WithRose->new;
-
 #my $BadgerClass              = WithBadgerClass->new;
-my $RubyishAttribute = WithRubyishAttribute->new;
+my $RubyishAttribute         = WithRubyishAttribute->new;
+my $WithCperl                = WithCperl->new;
+
 benchmark_diag(
     $iterations,
     {   moose                      => sub { $Moose->myattr },
@@ -54,8 +55,8 @@ benchmark_diag(
         class_xsaccessor_array     => sub { $ClassXSAccessorArray->myattr },
         object_tiny_xs             => sub { $ObjectTinyXS->myattr },
         rose                       => sub { $Rose->myattr },
-
-        #badger_class => sub { $BadgerClass->myattr },
-        rubyish_attribute => sub { $RubyishAttribute->myattr },
+        #badger_class              => sub { $BadgerClass->myattr },
+        rubyish_attribute          => sub { $RubyishAttribute->myattr },
+        cperl                      => sub { $WithCperl->myattr },
     }
 );

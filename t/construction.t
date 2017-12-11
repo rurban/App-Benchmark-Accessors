@@ -5,6 +5,7 @@ use App::Benchmark;
 use App::Benchmark::Accessors;
 my $iterations = shift;
 $iterations ||= 200_000;
+
 benchmark_diag(
     $iterations,
     {   moose                      => sub { WithMoose->new },
@@ -27,7 +28,8 @@ benchmark_diag(
         class_xsaccessor_array     => sub { WithClassXSAccessorArray->new },
         object_tiny_xs             => sub { WithObjectTinyXS->new },
         rose                       => sub { WithRose->new },
-
-      #badger_class               => sub { WithBadgerClass->new              } ,
+        #badger_class               => sub { WithBadgerClass->new } ,
+        rubyish_attribute          => sub { WithRubyishAttribute->new },
+        cperl                      => sub { WithCperl->new },
     }
 );

@@ -1,7 +1,7 @@
 package App::Benchmark::Accessors;
 use strict;
 use warnings;
-our $VERSION = '2.00';
+our $VERSION = '2.01';
 
 #<<<
 package    # hide from PAUSE
@@ -135,8 +135,12 @@ package    # hide from PAUSE
   WithRubyishAttribute;
 use Rubyish::Attribute;
 sub new { bless {}, shift }
-
 attr_accessor "myattr";
+
+class WithCperl {
+  has $myattr;
+}
+
 #>>>
 1;
 
@@ -198,6 +202,8 @@ mutable and immutable
 =item Rose
 
 =item Rubyish::Attribute
+
+=item cperl
 
 =back
 
